@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+<div class="total">
+
+
+<div class="container" style="align-items: center;">
+  <div class="titre" style=" margin-top:10px;display: flex;justify-content: center;align-items: center;">
+    <h2 >Votre avis nous importe 😃 !</h2>
+  </div>
+  <div class="both" style="display: grid;grid-template-columns: repeat(2, 1fr);grid-gap: 10px;">
+ 
+  <div class="left" style="margin-bottom:65px;margin-left:10px; width: 250px;display: flex;justify-content: center;flex-direction: column;align-items: center;text-align: center;">
+    <p style="text-decoration: underline;">Q1: Avez-vous trouvé notre site web facile à naviguer et à utiliser ?</p>
+    <select class="form-select" aria-label="Default select example" id="q1-select" name="q1">
+      <option value="très facile">Oui, très facile</option>
+      <option value="Oui, assez facile">Oui, assez facile</option>
+      <option selected>Neutre</option>
+      <option value="Non, assez difficile">Non, assez difficile</option>
+      <option value="Non, très difficile">Non, très difficile</option>
+    </select>
+  </div>
+  <div class="right" style="margin-right: 5px;display: flex;justify-content: center;flex-direction: column;align-items: center;text-align: center;margin-top: 50px">
+    <p style="text-decoration: underline;">Q2:Quels aspects avez-vous appréciés dans les recettes proposées ? </p>
+    <div class="reponsec" style="align-items: flex-start;">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Facilité de préparation" id="q2-checkbox-1" name="q2">
+        <label class="form-check-label" for="q2-checkbox-1">
+          Facilité de préparation
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Clarté des instructions" id="q2-checkbox-2" name="q2">
+        <label class="form-check-label" for="q2-checkbox-2">
+          Clarté des instructions
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Variété des recettes" id="q2-checkbox-3" name="q2">
+        <label class="form-check-label" for="q2-checkbox-3" style="margin-right:20px">
+          Variété des recettes
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Ingrédients courants" id="q2-checkbox-4" name="q2">
+        <label class="form-check-label" for="q2-checkbox-4" style="margin-right:10px">
+          Ingrédients courants
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Temps de cuisson" id="q2-checkbox-5" name="q2">
+        <label class="form-check-label" for="q2-checkbox-5" style="margin-right:35px">
+          Temps de cuisson
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Présentation visuelle" id="q2-checkbox-6" name="q2">
+        <label class="form-check-label" for="q2-checkbox-6" style="margin-right:12px">
+          Présentation visuelle
+        </label>
+      </div>
+    </div>
+    
+
+
+  </div>
+
+</div>
+    
+    <p style="margin-top: 30px;text-decoration: underline;">Q3:Quelle est votre opinion générale sur le site web de recettes ? </p>
+
+    <div class="containeri" style="display: flex; justify-content: center; align-items: center;">
+      <div class="post" {% if thanks %}style="display: block;"{% else %}style="display: none;"{% endif %}>
+        <div class="text" style="margin: 10px;">Merci d'avoir évalué notre site !</div>
+        <a href="/" class="btn btn-primary" style="margin-left:150px ;margin-bottom: 20px;"> Acceuil </a>
+      </div>
+      
+      <div class="star-widget">
+        <input type="radio" name="q3" id="rate-5" value="5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="q3" id="rate-4" value="4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="q3" id="rate-3" value="3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="q3" id="rate-2" value="2">
+        <label for="rate-2" class="fas fa-star" ></label>
+        <input type="radio" name="q3" id="rate-1" value="1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form id="rating-form" action="#">
+          <header></header>
+          <div class="textarea" name="commentaire">
+            <textarea  id="rate-comment" cols="30" placeholder="Votre opinion générale sur le site web ... "></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit" onclick="submitRating()" >Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+</div>
+    <script>
+      function submitRating() {
+  // Récupérer les valeurs sélectionnées dans le formulaire
+  const q1Value = document.getElementById("q1-select").value;
+  const q2Values = Array.from(document.querySelectorAll("[id^='q2-checkbox-']:checked")).map(el => el.value);
+  const q3Value = document.querySelector("input[name='q3']:checked").value;
+  const commentaireValue = document.querySelector("#rate-comment").value;
+
+  // Créer un objet contenant les données à envoyer
+  const formData = {
+    q1: q1Value,
+    q2: q2Values,
+    q3: q3Value,
+    commentaire: commentaireValue
+  };
+
+  // Envoyer les données à la base de données via une requête AJAX (vous devez ajouter votre propre URL de l'API ici)
+  fetch('/Avis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    if (response.ok) {
+      // Afficher le message de remerciement et cacher le formulaire
+      document.querySelector(".star-widget").style.display = "none";
+      document.querySelector(".post").style.display = "block";
+    } else {
+      console.error('Erreur lors de l\'envoi des données');
+    }
+  })
+  .catch(error => {
+    console.error('Erreur lors de l\'envoi des données:', error);
+  });
+
+  return false; // Empêcher la soumission du formulaire classique
+}
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+
+    {% block navbar %}
+     {{ super() }}
+    {% endblock %}
+
+    {% block content %}
+    <main>
+      <!--
+      <img  src=" {{ fruit_img }} " alt="Image non disponible " width="100%" height="100%" > -->
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 500px;" >
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+          </div>
+          <div class="carousel-inner" >
+            <div class="carousel-item" style="height: 500px;">
+              <img  class="bd-placeholder-img" style="filter: blur(3.5px);" src="{{url_for('static', filename='image/tawa.jpg')}}" alt="Image 2" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">  
+
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1>Chercher les recettes populaires </h1>
+                  <p>Accédez rapidement aux recettes les plus consultées et approuvées par<br/> les utilisateurs.</p>
+                  <p><a class="btn btn-lg btn-primary" href="{{url_for('types_view')}}">Chercher</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="height: 500px;">
+
+              <img  class="bd-placeholder-img" style="filter: blur(3.5px);" src="{{url_for('static', filename='image/burger.jpg')}}" alt="Image 2" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">  
+      
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Composez votre plat</h1> 
+                  <p>Trouvez vos recettes parfaites en fonction de vos ingrédients !</p>
+                  <p><a class="btn btn-lg btn-primary" href="{{url_for('ingredient_view')}}">Sélectionnez vos ingrédients </a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active" style="height: 500px;">
+              <img  class="bd-placeholder-img" style="filter: blur(3.5px);" src="{{url_for('static', filename='image/tomate.jpg')}}" alt="Image 2" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" >      
+              
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1>Rechercher par catégorie</h1>
+                  <p>Découvrez des recettes délicieuses classées par catégories .</p>
+                  <p><a class="btn btn-lg btn-primary" href="{{url_for('categorie_view')}}">Chercher</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      
+      
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+      
+        <div class="container marketing" style="padding-top: 50px;">
+      
+          <!-- Three columns of text below the carousel -->
+          <div class="row text-center" >
+            <div class="col-lg-4" >
+              <img  class="bd-placeholder-img rounded-circle" src="{{url_for('static', filename='image/morocco_food.jpg')}}" alt="Image Maroc" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" >
+
+      
+              <h2>Spécialité Marocaine</h2>
+              <p>Essayez de cuisiner les délicieux plats marocains connus pour leur saveur épicée et leur mélange unique d'épices et d'herbes.</p>
+              <p><a class="btn btn-secondary" href="{{url_for('categorie_view')}}" >Afficher les détails »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4" >
+              <img  class="bd-placeholder-img rounded-circle" src="{{url_for('static', filename='image/italien_food.jpg')}}" alt="Image Maroc" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" >
+
+              <h2>Spécialité Italienne</h2>
+              <p>Plongez dans l'univers culinaire de l'Italie et explorez ses recettes traditionnelles, synonymes de générosité et de convivialité.</p>
+              <p><a class="btn btn-secondary" href="{{url_for('categorie_view')}}" >Afficher les détails »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4" >
+              <img  class="bd-placeholder-img rounded-circle" src="{{url_for('static', filename='image/asian_food.jpg')}}" alt="Image Maroc" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" >
+      
+              <h2>Spécialité Asiatique</h2>
+              <p>Découvrez les saveurs exotiques de l'Asie avec des plats authentiques et délicieux</p>
+              <p style="padding-top: 25px;"><a  class="btn btn-secondary" href="{{url_for('categorie_view')}}">Afficher les détails »</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+      
+      
+          <!-- START THE FEATURETTES -->
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 " style="padding-top: 70px;" >
+              <h2 class="featurette-heading">Petit déjeuner <span class="text-muted">Ça va vous époustoufler.</span></h2>
+              <p class="lead">Le petit déjeuner est le repas le plus important de la journée, mais si vous voulez sauter un repas, sautez plutôt le dîner..</p>
+              <p style="padding-left: 200px;"><a class="btn btn-secondary" href="{{url_for('types_view')}}"  >Plus d'informations »</a></p>
+              
+            </div>
+            <div class="col-md-5">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{url_for('static', filename='image/brkfst.jpg')}}" alt="Image ingredient" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">      
+
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2" style="padding-top: 70px;">
+              <h2 class="featurette-heading"> Déjeuner <span class="text-muted">Voyez par vous-même.</span></h2>
+              <p class="lead"> Le déjeuner, c'est comme une pause méditative dans une journée de travail intense.</p>
+              
+              <p style="padding-left: 200px;"><a class="btn btn-secondary" href="{{url_for('types_view')}}"  >Plus d'informations »</a></p>
+
+            </div>
+            
+            <div class="col-md-5 order-md-1">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{url_for('static', filename='image/chef.jpg')}}" alt="Image Table" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">      
+
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7" style="padding-top: 70px;">
+              <h2 class="featurette-heading">Dessert <span class="text-muted">Échec et mat.</span></h2> 
+              <p class="lead">Un dessert par jour éloigne le médecin pour toujours.</p>
+              <p style="padding-left: 200px;"><a class="btn btn-secondary" href="{{url_for('types_view')}}"  >Plus d'informations »</a></p>
+
+            </div>
+            <div class="col-md-5">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{url_for('static', filename='image/dessert.jpg')}}" alt="Image Table" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">      
+      
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <!-- /END THE FEATURETTES -->
+      
+        </div><!-- /.container -->
+      
+      
+        
+      </main>
+
+    {% endblock %}
+
+   

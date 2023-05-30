@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<!-- types.html -->
+<style>
+  .table-rounded {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+}
+a {
+    text-decoration: none;
+  }
+
+</style>
+<script>
+  $(document).ready(function(){
+    $('#type-buttons button').click(function(){
+      //event.preventDefault();
+      var type = $(this).attr('value');
+      $.post('/Types', {type: type}, function(data){
+        if (data.status === 'success') {
+          var recettes = data.recettes;
+          var recettesHtml = '';
+          if (recettes.length > 0) {
+            recettesHtml += '<div class="table-rounded"><table class="table">';
+            recettesHtml += '<thead>';
+            recettesHtml += '<tr>';
+            recettesHtml += '<th>Name</th>';
+            recettesHtml += '<th>Type</th>';
+            recettesHtml += '<th>Catégorie</th>';
+            recettesHtml += '<th>Temps</th>';
+            recettesHtml += '<th>Recette</th>';
+            recettesHtml += '</tr>';
+            recettesHtml += '</thead>';
+            recettesHtml += '<tbody>';
+            for (var i = 0; i < recettes.length; i++) {
+              recettesHtml += '<tr class="';
+              if (recettes[i].type == 'Petit dejeuner') {
+                recettesHtml += 'table-info';
+              } else if (recettes[i].type == 'Plat principal') {
+                recettesHtml += 'table-warning';
+              } else if (recettes[i].type == 'Dessert') {
+                recettesHtml += 'table-success';
+              } else if (recettes[i].type == 'Assortissement') {
+                recettesHtml += 'table-secondary';
+              }
+              recettesHtml += '">';
+              recettesHtml += '<td>' + recettes[i].name + '</td>';
+              recettesHtml += '<td>' + recettes[i].type + '</td>';
+              recettesHtml += '<td>' + recettes[i].categorie + '</td>';
+              recettesHtml += '<td>' + recettes[i].temps + '</td>';
+              recettesHtml += '<td><a href="/Recette?name=' + recettes[i].name + '">Voir la recette</a></td>';
+
+              recettesHtml += '</tr>';
+            }
+            recettesHtml += '</tbody>';
+            recettesHtml += '</table></div>';
+
+          } else {
+            recettesHtml += '<p>Aucune recette pour ce type n\'a été trouvée.</p>';
+          }
+          $('#result').html(recettesHtml);
+        } else {
+          $('#result').html('<p>Erreur : ' + data.message + '</p>');
+        }
+      }, 'json');
+    });
+  });
+  
+  $(document).ready(function() {
+  var firstBtn = $('#type-buttons button:first-child');
+  firstBtn.addClass('active');
+  firstBtn.click();
+});
+ 
+</script>
+
+<style>
+  #type-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #type-buttons button {
+    margin: 10px;
+  }
+</style>
+
+<h1>Types de recettes</h1>
+<div id="type-buttons">
+  <button value="All" class="btn btn-primary" checked>Tous</button>
+  <button value="Petit dejeuner" class="btn btn-primary">Petit déjeuner</button>
+  <button value="Plat principal" class="btn btn-primary">Plat principal</button>
+  <button value="Assortissement" class="btn btn-primary">Assortissement</button>
+  <button value="Dessert" class="btn btn-primary">Dessert</button>
+</div>
+
+
+<div id="result" style="margin: 50px;">
+</div>
+
+{% endblock %}

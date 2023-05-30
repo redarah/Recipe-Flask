@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<!--Script pour la rotation du boutton-->
+<script>
+  
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to rotate an element by changing its transform property
+      function rotateElement(element, degrees, duration) {
+        element.style.transitionDuration = duration + 'ms';
+        element.style.transform = 'rotate(' + degrees + 'deg)';
+      }
+  
+      // Function to reset the rotation of an element
+      function resetRotation(element) {
+        element.style.transitionDuration = '0ms';
+        element.style.transform = 'rotate(0deg)';
+      }
+  
+      // Function to rotate the image
+      function startRotation() {
+        var image = document.querySelector('.img-fluid.rounded-circle');
+  
+        rotateElement(image, 360, 3000); // Rotate image by 360 degrees in 3 seconds
+  
+        // Reset the rotation after 3 seconds
+        setTimeout(function() {
+          resetRotation(image);
+        }, 3000);
+      }
+  
+      // Start the rotation when the page finishes loading
+      startRotation();
+      var form = document.getElementById('ingredientForm');
+      form.addEventListener('submit', function(event) {
+        var checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+        if (checkboxes.length === 0) {
+          event.preventDefault(); // Empêche la soumission du formulaire si aucune case n'est cochée
+        } else {
+          // Le formulaire sera soumis avec les cases cochées
+          // Vous pouvez ajouter d'autres logiques ici si nécessaire
+  
+          // Vérification si la combinaison est disponible
+          var availableCombination = true; // Remplacez cela par votre logique de vérification
+  
+          if (!availableCombination) {
+            event.preventDefault(); // Empêche la soumission du formulaire
+            // Affichage du message d'erreur pendant 5 secondes
+            alert("Désolé, mais cette combinaison n'est pas disponible pour l'instant.");
+            setTimeout(function() {
+              alert.dismiss();
+            }, 5000);
+          }
+        }
+      });
+    });
+</script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const button2 = document.getElementById('button2');
+  const form = document.getElementById('ingredientForm');
+  
+  button2.addEventListener('click', function() {
+    form.submit(); // Soumettre le formulaire lorsque le bouton 2 est cliqué
+  });
+});
+
+  </script>
+  
+  
+
+
+<div class="total" style="padding: 50px;">
+    
+<div class="titre" style="margin-left:513px;">
+    <h2>Mix && Match</h2>
+</div>
+<div class="left" style="float: left; width: 50%;background-color: #D2B48C;">
+    <!-- <h2 style="margin-left:315px;">Mix &&</h2>-->
+
+<form id="ingredientForm" action="{{ url_for('resultat_view') }}" method="post">
+
+{% for description in descriptions %}
+  <h3 style="margin-left:150px;margin-top:20px;margin-bottom:10px;">{{ description }}</h3>
+  {% for ingredient in ingredients %}
+    {% if ingredient.description == description %}
+
+    <div class="form-check form-check-inline" style="margin-left: 20px;">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="ingredient" value="{{ ingredient.name }}">
+        <label class="form-check-label" for="inlineCheckbox1">{{ ingredient.name }}</label>
+      </div>
+      
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<button  id="button1" type="submit" style="border: none; background: none;display: none; "></button>
+
+<!--<button  type="submit" style="position: fixed; top: 63%; left: 73%; transform: translate(-50%, -50%);border: none; background: none; ">
+                <img src="{{ url_for('static', filename='image/search.PNG') }}" style="border-radius: 50%;"  width="80" height="80"  class="img-fluid rounded-circle" alt=" Picture ">
+            
+        </button>-->
+
+</form>
+
+</div>
+<div class="right" style="float: right; width: 50%; background-color: #FFEC99;height: 5905px; ">
+    
+    
+
+        <div class ="cercle" style="position: fixed; bottom: 10%; left: 73%; transform: translateX(-50%); width: 350px; height: 350px; background-color: lightgreen; border-radius: 50%; transition: transform 3s;">
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(45deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-45deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(90deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-90deg); width: 4px; height: 100%; background-color: #fff;"></div>
+        </div>
+        <button  id="button2"  type="submit" style="position: fixed; top: 63%; left: 73%; transform: translate(-50%, -50%);border: none; background: none; ">
+          <img src="{{ url_for('static', filename='image/search.PNG') }}" style="border-radius: 50%;"  width="80" height="80"  class="img-fluid rounded-circle" alt=" Picture ">
+      </button>
+        
+
+    
+    
+    
+
+
+</div>
+
+
+
+
+{% endblock %}
+

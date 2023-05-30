@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="total" style="display: grid;grid-template-columns: repeat(2, 1fr);grid-gap: 10px;padding: 50px;">
+    
+<div class="left" style="background-color: #D2B48C;">
+    <!-- <h2 style="margin-left:315px;">Mix &&</h2>-->
+
+    
+{% for description in descriptions %}
+  <h3 style="margin-left:150px;margin-top:20px;margin-bottom:10px;">{{ description }}</h3>
+  {% for ingredient in ingredients %}
+    {% if ingredient.description == description %}
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">{{ ingredient.name }}</label>
+      </div>
+      
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>
+<div class="right" style="background-color: #FFEC99; position: relative;">
+    <!--<h2>Match</h2>-->
+    
+        <div classe ="cercle" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 200px; height: 200px; background-color: lightgreen; border-radius: 50%;">
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(45deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-45deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(90deg); width: 4px; height: 100%; background-color: #fff;"></div>
+          <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-90deg); width: 4px; height: 100%; background-color: #fff;"></div>
+        </div>
+        <a href="#" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px;">Match</a>
+    
+    
+</div>
+
+
+
+
+</div>
+{% endblock %}

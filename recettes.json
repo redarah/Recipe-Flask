@@ -1,0 +1,376 @@
+{
+    "recettes": [
+      {
+        "id" : 1,
+        "name": "Couscous aux legumes",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "1 heure",
+        "description":"Faire cuire du couscous selon les instructions sur le paquet ; Couper des carottes, des courgettes, des navets et des poivrons en petits morceaux et les faire cuire dans une casserole avec de l'huile d'olive, de l'ail et du cumin;Ajouter des pois chiches egouttes dans la casserole;Servir le couscous dans des assiettes et ajouter les legumes sur le dessus",
+        "image": "couscous.jpg",
+        "video": "couscous.mp4",
+        "ingredient": ["Semoule de couscous","Bouillon de legumes", "Carottes", "Courgettes","Pois chiches","Navets","Oignons","Ail","Huile d'olive"]
+      },
+      {
+        "id" : 2,
+        "name": "Tajine de poulet aux citrons confits",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "1 heure 30 minutes",
+        "description":"Faire dorer des morceaux de poulet dans une casserole avec de l'huile d'olive;Ajouter de l'oignon hache et de l'ail emince dans la casserole et les faire revenir jusqu'a ce qu'ils soient tendres;Ajouter des epices, comme du curcuma, du gingembre et du cumin dans la casserole et remuer;Ajouter des citrons confits, des olives et de l'eau dans la casserole et laisser mijoter jusqu'a ce que le poulet soit cuit et tendre;Servir le tajine dans des assiettes et garnir de persil frais",
+        "image": "tajine.jpg",
+        "video": "tajine.mp4",
+        "ingredient": ["Poulet","Bouillon de volaille", "Citrons", "Oignons","Ail","Huile d'olive"]
+      },
+      {
+        "id" : 3,
+        "name": "Pastilla au pigeon",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "2 heures",
+        "description":"Cuire un pigeon dans de l'eau bouillante avec des oignons, de l'ail, du sel et des epices (cumin, cannelle, poivre noir);Retirer la viande du pigeon, la hacher et la melanger avec des œufs battus, de la cannelle et du sucre;Dans un moule a tarte, alterner des feuilles de brick beurrees et la farce de pigeon;Saupoudrer de sucre glace et de cannelle;Faire cuire au four jusqu'a ce que la pastilla soit doree et croustillante;Servir chaud avec une salade",
+        "image": "pastilla.jpg",
+        "video": "pastilla.mp4",
+        "ingredient": ["Pigeon","Beurre", "Feuilles de brick", "Amandes","Amandes","Oignons","Cannelle","Sucre","Oeuf","Persil","Coriandre"]
+      },
+      {
+        "id" : 4,
+        "name": "Harira",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "1 heure",
+        "description":"Faire revenir des oignons, de l'ail, des tomates pelees et des epices (curcuma, gingembre, cannelle);Ajouter de l'eau, des pois chiches, des lentilles et du celeri coupe en morceaux;Laisser mijoter pendant environ 30 minutes jusqu'a ce que les legumes soient tendres;Ajouter du vermicelle et du persil hache;Servir chaud avec du citron et du pain",
+        "image": "harira.jpg",
+        "video": "harira.mp4",
+        "ingredient": ["Tomates","Bouillon de legumes", "Oignons", "Celeri","Coriandre","Persil","Lentilles","Pois chiches","Vermicelles","Huile d'olive"]
+      },
+      {
+        "id" : 5,
+        "name": "Briouates au fromage",
+        "type": "Assortissement",
+        "categorie": "Marocaine",
+        "temps": "45 minutes",
+        "description":"Melanger du fromage râpe avec des œufs battus et du persil hache;Mettre une cuillere a soupe de farce sur une feuille de brick et plier pour former un triangle;Faire frire les briouates dans de l'huile chaude jusqu'a ce qu'ils soient dores et croustillants;Servir chaud avec du citron et une salade",
+        "image": "briouates.jpg",
+        "video": "briouates.mp4",
+        "ingredient": [ "Feuilles de brick","cheddar", "feta", "emmental","Persil","Coriandre","Ail","Oeuf","Huile vegetale"]
+      },
+      {
+        "id" : 6,
+        "name": "Salade Marocaine",
+        "type": "Assortissement",
+        "categorie": "Marocaine",
+        "temps": "15 minutes",
+        "description":"Melanger des tomates, des concombres, des oignons rouges, du persil et de la coriandre haches;Ajouter un filet d'huile d'olive, du jus de citron, du sel et du poivre;Servir frais.",
+        "image": "salade.jpg",
+        "video": "salade.mp4",
+        "ingredient": [ "Tomates","Concombres","Poivrons","Oignons rouges","Olives","Persil","Menthe","Citron","Huile d'olive"]
+      },
+      {
+        "id" : 7,
+        "name": "Chorba aux vermicelles",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "45 minutes",
+        "description":"Faire revenir des oignons et des carottes haches dans de l'huile d'olive;Ajouter de l'ail et des epices (paprika, cumin, coriandre);Ajouter de l'eau et des vermicelles et laisser cuire jusqu'a ce que les legumes soient tendres;Servir chaud.",
+        "image": "chorba.jpg",
+        "video": "chorba.mp4",
+        "ingredient": [ "Vermicelles","Tomates","Carottes","Courgettes","Oignons","Celeri","Coriandre","Persil","Harissa","Bouillon de legumes"]
+      },
+      {
+        "id" : 8,
+        "name": "Crevettes grillees a la Marocaine",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "30 minutes",
+        "description":"Melanger des crevettes decortiquees avec de l'ail hache, du jus de citron, du paprika, du cumin, de la coriandre, de l'huile d'olive et du sel;Faire griller au barbecue ou dans une poele jusqu'a ce que les crevettes soient cuites;Servir chaud.",
+        "image": "crevettes.jpg",
+        "video": "crevettes.mp4",
+        "ingredient": [ "Crevettes","Ail","Citron","Huile d'olive","Persil","Paprika","Cumin","Harissa"]
+      },
+      {
+        "id" : 9,
+        "name": "Msemen",
+        "type": "Petit dejeuner",
+        "categorie": "Marocaine",
+        "temps": "30 minutes",
+        "description":"Melanger de la farine, du sel et de l'eau pour faire une pâte;Laisser reposer. etaler la pâte en cercles fins et badigeonner d'huile;Plier plusieurs fois pour former un carre;Faire cuire dans une poele jusqu'a ce que les deux côtes soient dores;Servir chaud.",
+        "image": "msemen.jpg",
+        "video": "msemen.mp4",
+        "ingredient": [ "Farine","Semoule fine","Eau","Sel","Huile vegetale","Beurre"]
+      },
+      {
+        "id" : 10, 
+        "name": "Baghrir",
+        "type": "Petit dejeuner",
+        "categorie": "Marocaine",
+        "temps": "30 minutes",
+        "description":"Melanger de la semoule fine, de la farine, de la levure, du sel et de l'eau tiede;Laisser reposer. Cuire la pâte dans une poele chaude pour former des crepes epaisses et pleines de trous;Servir chaud avec du miel ou du beurre.",
+        "image": "baghrir.jpg",
+        "video": "baghrir.mp4",
+        "ingredient": [ "Semoule fine","Farine","Levure boulangere","Eau","Sel","Levure chimique"]
+      },
+      {
+        "id" : 11,
+        "name": "Spaghetti a la bolognaise",
+        "type": "Plat principal",
+        "categorie": "Italienne",
+        "temps": "45 min",
+        "description":"Faire revenir de la viande hachee et des oignons dans de l'huile d'olive;Ajouter de l'ail, des tomates concassees en boite, du concentre de tomates, du thym, du laurier, du sel et du poivre;Laisser mijoter. Servir chaud sur des spaghetti cuits.",
+        "image": "spaghetti.jpg",
+        "video": "spaghetti.mp4",
+        "ingredient": ["Spaghetti","Viande hachee de bœuf","Tomates","Oignons","Carottes","Celeri","Ail","Concentre de tomates","Vin rouge","Bouillon de bœuf","Huile d'olive","Basilic","Parmesan"]
+      },
+      {
+        "id" : 12,
+        "name": "Ratatouille",
+        "type": "Plat principal",
+        "categorie": "France",
+        "temps": "1 h 30 min",
+        "description":"Faire revenir des oignons, de l'ail, des aubergines, des courgettes, des poivrons et des tomates dans de l'huile d'olive;Ajouter du thym, du laurier, du sel et du poivre;Laisser mijoter jusqu'a ce que les legumes soient tendres;Servir chaud ou froid.",
+        "image": "ratatouille.jpg",
+        "video": "ratatouille.mp4",
+        "ingredient": ["Aubergines","Courgettes","Poivrons","Tomates","Oignons","Ail","Huile d'olive","Thym","Romarin","Basilic"]
+      },
+      {
+        "id" : 13,
+        "name": "Chakchouka",
+        "type": "Plat principal",
+        "categorie": "maghrebine",
+        "temps": "30 min",
+        "description":"Faire revenir des oignons, des poivrons et des tomates dans de l'huile d'olive;Ajouter de l'ail, du cumin, du paprika, du sel et du poivre;Ajouter des œufs battus et laisser cuire jusqu'a ce que les œufs soient pris;Servir chaud.",
+        "image": "chakchouka.jpg",
+        "video": "chakchouka.mp4",
+        "ingredient": [ "Poivrons","Tomates","Oignons","Ail","Oeuf","Paprika","Cumin","Huile d'olive","Persil"]
+      },
+      {
+        "id" : 14,
+        "name": "Poulet tikka masala",
+        "type": "Plat principal",
+        "categorie": "indienne",
+        "temps": "1 h 30 min",
+        "description":"Mariner le poulet dans une sauce epicee.;Faire cuire le poulet sur le grill ou dans une poele.;Ajouter la sauce tikka masala et laisser mijoter;Servir avec du riz.",
+        "image": "poulet_masala.jpg",
+        "video": "poulet_masala.mp4",
+        "ingredient": [ "Poulet","Yaourt","Tomates","Oignons","Ail","Gingembre","Creme fraiche","Coriandre"]
+      },
+     
+      {
+        "id" : 16,
+        "name": "Tajine d'agneau aux pruneaux",
+        "type": "Plat principal",
+        "categorie": "Marocaine",
+        "temps": "2 h 30 min",
+        "description":"Faire revenir l'agneau avec des epices et des oignons.;Ajouter de l'eau et laisser mijoter jusqu'a ce que l'agneau soit tendre.;Ajouter les pruneaux et laisser mijoter pendant quelques minutes;Servir chaud",
+        "image": "agneaux.jpg",
+        "video": "agneaux.mp4",
+        "ingredient": [ "Agneau","Pruneaux","Oignons","Ail","Cannelle","Gingembre","Miel","Bouillon de volaille","Huile d'olive","Amandes"]
+      },
+      {
+        "id" : 17,
+        "name": "Chili con carne",
+        "type": "Plat principal",
+        "categorie": "Mexicaine",
+        "temps": "1 h 30 min",
+        "description":"Faire revenir la viande hachee avec des oignons et des poivrons.;Ajouter des haricots rouges, de la tomate et des epices.;Laisser mijoter jusqu'a ce que les saveurs soient bien melangees;Servir chaud",
+        "image": "chili.jpg",
+        "video": "chili.mp4",
+        "ingredient": ["Viande hachee de boeuf","Haricots rouges","Tomates","Oignons","Poivrons","Ail","Bouillon de boeuf","Huile d'olive"]
+
+      },
+      {
+        "id" : 18,
+        "name": "Moules marinieres",
+        "type": "Plat principal",
+        "categorie": "France",
+        "temps": "30 min",
+        "description":"Faire revenir de l'ail et de l'oignon dans de l'huile d'olive;Ajouter les moules et un verre de vin blanc;Laisser cuire jusqu'a ce que les moules s'ouvrent;Servir le plat",
+        "image": "moule.jpg",
+        "video": "moule.mp4",
+        "ingredient": [ "Moules","Oignons","Ail","Persil","Vin blanc","Beurre"]
+      },
+      {
+        "id" : 19,
+        "name": "Pizza margherita",
+        "type": "Plat principal",
+        "categorie": "Italienne",
+        "temps": "2 h",
+        "description":"etaler de la pâte a pizza;Ajouter de la sauce tomate et du fromage;Ajouter des tomates et du basilic;Cuire au four;Servir le plat",
+        "image": "piza.jpg",
+        "video": "piza.mp4",
+        "ingredient": ["Pâte a pizza","Tomates","Mozzarella","Basilic","Huile d'olive"]
+      },
+      {
+        "id" : 20,
+        "name": "Crepes",
+        "type": "Dessert",
+        "categorie": "France",
+        "temps": "30 min",
+        "description":"Melanger de la farine, du sucre, des œufs et du lait;Cuire dans une poele chaude;Servir le plat",
+        "image": "crepe.jpg",
+        "video": "crepe.mp4",
+        "ingredient": [ "Farine","oeuf","Lait","Beurre","Sucre","Sel"]
+      },
+      {
+        "id" : 21,
+        "name": "Tiramisu",
+        "type": "Dessert",
+        "categorie": "Italienne",
+        "temps": "30 min",
+        "description":"Melanger du mascarpone, des œufs et du sucre;Tremper des biscuits dans du cafe;Superposer les couches de biscuits et de creme;Mettre au refrigerateur;Servir le plat",
+        "image": "tiramisu.jpg",
+        "video": "tiramisu.mp4",
+        "ingredient": ["Biscuits a la cuillere","Cafe fort","Mascarpone","Oeufs","Sucre","Cacao amer en poudre"]
+
+      },
+      { 
+        "id" : 22,
+        "name": "Cheesecake",
+        "type": "Dessert",
+        "categorie": "Americaine", 
+        "temps": "2 hours",
+        "description":"ecraser des biscuits et les melanger avec du beurre fondu;etaler dans un moule a gâteau;Melanger du fromage frais, du sucre et des œufs;Verser le melange sur la croûte;Cuire au four;Servir le plat",
+        "image": "cheesecake.jpg", 
+        "video": "cheesecake.mp4" ,
+        "ingredient": ["Biscuits Graham","Beurre","Fromage frais","Sucre","Oeufs","Vanille"]
+      }, 
+      
+      { 
+        "id" : 24,
+        "name": "Moussaka",
+        "type": "Plat principal",
+        "categorie": "Greek",    
+        "temps": "2 hours",
+        "description":"Cuire des aubergines, des pommes de terre et de la viande hachee;Superposer les couches d'aubergines, de pommes de terre et de viande;Ajouter une sauce bechamel;Cuire au four;Servir le plat",
+        "image": "moussaka.jpg",    
+        "video": "moussaka.mp4" ,
+        "ingredient": ["Aubergines","Pommes de terre","Viande hachee d'agneau","Oignons","Ail","Tomates","Sauce bechamel","Fromage râpe"] 
+      },
+      {     
+        "id" : 25,
+        "name": "Hummus",    
+        "type": "Assortissement",    
+        "categorie": "Moyen orient",   
+        "temps": "20 minutes", 
+        "description":"Mixer des pois chiches, de l'ail, du jus de citron et de l'huile d'olive;Ajouter du tahini;Servir avec du pain pita;Servir le plat",   
+        "image": "hummus.jpg",    
+        "video": "hummus.mp4" ,
+        "ingredient": ["Pois chiches","Tahini","Ail","Jus de citron","Huile d'olive","Cumin","Sel","Persil", "Coriandre"]
+      },
+     
+      {    
+        "id" : 27,
+        "name": "Pad Asiatique",    
+        "type": "Plat principal",    
+        "categorie": "Asiatique", 
+        "temps": "45 minutes",   
+        "description":"Faire cuire des nouilles de riz et des legumes dans une poele;Ajouter de la sauce soja et du citron vert;Ajouter des cacahuetes et de la coriandre;Servir le plat",  
+        "image": "pad.jpg",    
+        "video": "pad.mp4" ,
+        "ingredient": ["Nouilles de riz","Carottes", "Poivrons", "Oignons", "Chou"," Tofu","Sauce soja","Sauce d'huitre","Sauce chili","Ail","Huile vegetale","Oeufs","Noix de cajou"]
+       }, 
+      {    
+        "id" : 28,
+      "name": "Biryani",    
+      "type": "Plat principal",    
+      "categorie": "Indien", 
+      "temps": "1 hour 30 minutes", 
+      "description":"Faire cuire du riz et des legumes dans une poele;Ajouter de la viande ou du poulet;Ajouter des epices, comme du curcuma et du cumin;Servir le plat",     
+      "image": "biryani.jpg",    
+      "video": "biryani.mp4" ,
+      "ingredient": ["Riz basmati","Carottes", "Poivrons","Oignons","Ail","Gingembre","Coriandre","Cannelle","Clou de girofle","Cardamome","Yaourt","Tomates","Coriandre","Menthe","Raisins secs","Amandes"]
+       }, 
+      {   
+        "id" : 29,
+      "name": "Sushi",    
+      "type": "Assortissement",    
+      "categorie": "Asiatique",  
+      "temps": "1 hour", 
+      "description":"Cuire du riz a sushi;etaler le riz sur une feuille de nori;Ajouter du poisson ou des legumes;Rouler la feuille de nori;Couper en tranches;Servir le plat",     
+      "image": "sushi.jpg",    
+      "video": "sushi.mp4" ,
+      "ingredient": [ "Riz a sushi","Vinaigre de riz","Nori","fruits de mer","Concombre", "Avocat", "Carotte","Wasabi","Sauce soja","Gingembre"] }, 
+      {
+        "id" : 30,
+      "name": "Croissants",    
+      "type": "Petit dejeuner",    
+      "categorie": "France",    
+      "temps": "2 hours",  
+      "description":"Preparer la pâte feuilletee et la laisser reposer au refrigerateur.;etaler la pâte et decouper des triangles.;Rouler chaque triangle pour former le croissant.;Badigeonner de jaune d'œuf et laisser reposer avant de cuire au four.;Servir le plat",  
+      "image": "croissants.jpg",    
+      "video": "croissants.mp4" ,
+      "ingredient": ["Pâte feuilletee","Beurre","Œufs","Sucre","Chocolat"] }, 
+      {   
+        "id" : 31,
+      "name": "Pancakes",    
+      "type": "Petit dejeuner",    
+      "categorie": "Americaine",  
+      "temps": "30 minutes",   
+      "description":"Melanger la farine, le sucre, la levure et le sel dans un bol.;Ajouter le lait, l'œuf et l'huile.;Bien melanger pour obtenir une pâte lisse.;Faire chauffer une poele a feu moyen.;Verser une petite quantite de pâte et cuire jusqu'a ce que des bulles se forment a la surface.;Retourner et cuire jusqu'a ce que les deux côtes soient dores.;Servir le plat",   
+      "image": "pancakes.jpg",    
+      "video": "pancakes.mp4" ,
+      "ingredient": ["Farine","Oeufs","Lait","Sucre","Levure chimique","Beurre ","Sirop d'erable"] },  
+      {    
+        "id" : 32,
+      "name": "Omelette",    
+      "type": "Petit dejeuner",    
+      "categorie": "France",    
+      "temps": "15 minutes", 
+      "description":"Casser les œufs dans un bol et les battre avec une fourchette.;Ajouter les ingredient souhaites (fromage, legumes, jambon, etc.).;Verser le melange dans une poele chaude et cuire jusqu'a ce que les bords soient dores.;Plier l'omelette en deux et servir.;Servir le plat",     
+      "image": "omelette.jpg",    
+      "video": "omelette.mp4" ,
+      "ingredient": [ "Oeufs","Lait","Sel","Poivre","Beurre"] },
+      {
+        "id" : 33,
+        "name": "Creme brulee",
+        "type": "Dessert",
+        "categorie": "Pâtisseries",
+        "temps": "1 h",
+        "description":"Prechauffer le four a 150°C.;Faire chauffer la creme et le sucre dans une casserole jusqu'a ce que le sucre soit dissous.;Fouetter les jaunes d'œufs dans un bol.;Ajouter lentement la creme chaude aux jaunes d'œufs tout en fouettant.;Verser le melange dans des ramequins et cuire au four jusqu'a ce que le centre soit ferme.;Saupoudrer de sucre et brûler la surface avec un chalumeau.;Servir le plat",  
+        "image": "Creme.jpg",
+        "video": "Creme.mp4",
+        "ingredient": ["Creme liquide","Jaune d'oeuf","Sucre","Vanille","Cassonade"]
+     },
+     {
+      "id" : 38,
+        "name": "Salade de quinoa",
+        "type": "Assortissement",
+        "categorie": "Salades",
+        "temps": "30 min",
+        "description":"Faire cuire le quinoa dans de l'eau bouillante jusqu'a ce qu'il soit tendre.;Ajouter des legumes (tomates, concombre, poivrons, etc.) et des herbes (menthe, coriandre, persil, etc.).;Assaisonner avec de l'huile d'olive, du jus de citron et du sel et du poivre.;Servir le plat",  
+        "image": "quinoa_salad.jpg",
+        "video": "quinoa_salad.mp4",
+        "ingredient": [ "Quinoa","Tomates", "Concombres", "Poivrons", "Oignons","Persil","Menthe","Jus de citron","Huile d'olive"]
+     },
+     {
+      "id" : 333,
+        "name": "Tarte aux pommes",
+        "type": "Dessert",
+        "categorie": "Pâtisseries",
+        "temps": "1 h",
+        "description":"eplucher et couper les pommes en tranches fines.;Preparer la pâte a tarte et la deposer dans un moule.;Disposer les tranches de pommes sur la pâte.;Saupoudrer de sucre et de cannelle.;Cuire au four jusqu'a ce que la croûte soit doree et les pommes tendres.;Servir le plat",  
+        "image": "apple_pie.jpg",
+        "video": "apple_pie.mp4",
+        "ingredient": ["Pâte brisee ou feuilletee","Pommes","Sucre","Cannelle","Beurre"]
+
+     },
+     {
+      "id" : 345,
+        "name": "Steak grille",
+        "type": "Plat principal",
+        "categorie": "Viande",
+        "temps": "20 min",
+        "description":"Assaisonner le steak avec du sel et du poivre.;Faire chauffer une poele ou un gril a feu vif.;Ajouter le steak et cuire jusqu'a la cuisson desiree.;Laisser reposer quelques minutes avant de servir.;Servir le plat",  
+        "image": "grilled_steak.jpg",
+        "video": "grilled_steak.mp4",
+        "ingredient": ["Steak "]
+     }
+     
+     
+     
+     
+    
+    ]
+}
+    
+  

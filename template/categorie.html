@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-4">
+      <div id="list-example" class="list-group" style="position: fixed;top:30%;left:3% " >
+        {% for cat in valid_cat %}
+          <a class="list-group-item list-group-item-action" href="#list-item-{{ cat }}" style="width:350px;text-align: center;">{{ cat }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-8">
+      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        {% for cat in valid_cat %}
+          <div>
+            <h4 id="list-item-{{ cat }}">{{ cat }}</h4>
+            <div id="cat-{{ cat }}" class="card-columns" style=" display: grid;grid-template-columns: repeat(2, 1fr);grid-gap: 10px;">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // Au chargement de la page, on récupère les recettes de toutes les catégories
+      getRecettes('All');
+    
+      // Lorsqu'on clique sur une catégorie, on récupère les recettes de cette catégorie
+      $('.list-group-item').click(function() {
+        var cat = $(this).text();
+        getRecettes(cat);
+      });
+    
+      // Variables pour suivre l'index du lien actif
+      var activeIndex = 0;
+      var totalLinks = $('.list-group-item').length;
+
+      // Fonction pour désactiver le dernier lien
+      function disableLastLink() {
+        if (activeIndex === totalLinks - 1) {
+            $('.list-group-item').eq(activeIndex).removeClass('active');
+        }
+    }
+
+      // On clique sur tous les liens de catégorie
+      $('.list-group-item').each(function(index) {
+        $(this).click();
+        activeIndex = index;
+        disableLastLink();
+    });
+    
+      function getRecettes(cat) {
+        $.ajax({
+          type: 'POST',
+          url: '/Categorie',
+          data: { categorie: cat },
+          success: function(result) {
+            if (result.status == 'success') {
+              // On vide la liste des recettes précédentes
+              $('#cat-' + cat).empty();
+    
+              // On ajoute les nouvelles recettes sous forme de carte
+              $.each(result.recettes, function(index, recette) {
+                $('#cat-' + cat).append(
+                    '<div class="two-cols" >'+
+                    
+                    '<div class="card mb-3" style="height: 320px; ">'+
+                        '<div class="row g-0">' +
+                          '<div class="col-md-6"  >' +
+                                '<div class="float-start" >' +
+                                    '<img src="/static/image/' + recette.image + '" width="612" height="425" style="padding-top:50px;padding-left:20px;" class="img-fluid rounded-start" alt=" Picture ">'+ 
+        
+                                '</div>'+
+                            '</div>'+
+                    
+                            '<div class="col-md-6">'+
+                                '<div class="float-end">'+
+                                    '<div class="card-body" >'+
+                                            ' <h5 class="card-title">'+ recette.name +'</h5>'+
+                                                '<ul class="list-group list-group-flush">'+
+                                                    '<li class="list-group-item">Type :'+ recette.type +'</li>'+
+                                                    '<li class="list-group-item">Categorie : ' + recette.categorie + '</li>'+
+                                                    ' <li class="list-group-item">Temps : ' + recette.temps + '</li>'+
+                                                '</ul>'+
+                                            '<div class="card-body" >'+
+                                                '<a href="/Recette?name=' + recette.name + '" class="btn btn-primary"  >Explorer</a>'+
+                                            '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                    '</div>'
+                );
+                
+              });
+            } else {
+              alert(result.message);
+            }
+          },
+          error: function(xhr, status, error) {
+            alert('Une erreur est survenue : ' + error);
+          }
+        });
+      }
+    });
+    
+  </script>
+{% endblock %}

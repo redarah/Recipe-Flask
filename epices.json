@@ -1,0 +1,38 @@
+{
+    "epices": [
+      {"id": 1,"name": "Cumin", "description": "Epice marocaine"},
+      {"id": 2, "name": "Curry", "description": "Epice indienne"},
+      {"id": 3, "name": "Paprika", "description": "Epice espagnole"},
+      {"id": 4, "name": "Gingembre", "description": "Epice asiatique"},
+      {"id": 5, "name": "Safran", "description": "Epice iranienne"},
+      {"id": 6, "name": "Cannelle", "description": "Epice orientale"},
+      {"id": 7, "name": "Coriandre", "description": "Epice mediterraneenne"},
+      {"id": 8, "name": "Cardamome", "description": "Epice asiatique"},
+      {"id": 9, "name": "Anis etoile", "description": "Epice chinoise"},
+      {"id": 10, "name": "Muscade", "description": "Epice des iles"},
+      {"id": 11, "name": "Poivre noir", "description": "Epice universelle"},
+      {"id": 12, "name": "Piment de Cayenne", "description": "Epice americaine"},
+      {"id": 13, "name": "Sumac", "description": "Epice du Moyen-Orient"},
+      {"id": 14, "name": "Curcuma", "description": "Epice indienne"},
+      {"id": 15, "name": "Aneth", "description": "Epice scandinave"},
+      {"id": 16, "name": "Fenouil", "description": "Epice mediterraneenne"},
+      {"id": 17, "name": "Clou de girofle", "description": "Epice asiatique"},
+      {"id": 18, "name": "Ras el hanout", "description": "Epice marocaine"},
+      {"id": 19, "name": "Zaatar", "description": "Epice moyen-orientale"},
+      {"id": 20, "name": "Carvi", "description": "Epice mediterraneenne"},
+      {"id": 21,"name": "Sumac",    "description": "Epice acidulee d'origine moyen-orientale, utilisee dans les marinades, les vinaigrettes et les plats de viande."  }, 
+      {"id": 22,"name": "Gingembre frais",    "description": "Racine aromatique et epicee, utilisee pour aromatiser les plats sucres et sales, les boissons chaudes et les desserts."  }, 
+      {"id": 23,"name": "Curcuma",    "description": "Epice jaune-orange utilisee dans les currys, les plats de viande et de legumes, et les sauces."  }, 
+      {"id": 24,"name": "Cardamome",    "description": "Petite graine aromatique utilisee dans les plats sucres et sales, les thes, les infusions et les melanges d'epices."  },
+      {"id": 25,"name": "Fenugrec",    "description": "Graine aromatique et legerement amere, utilisee dans les plats indiens, les pains et les soupes."  },  
+      {"id": 26,"name": "Cumin",    "description": "Petite graine aromatique et legerement amere, utilisee dans les plats de viande, de legumes, les sauces et les soupes."  },
+      {"id": 27,"name": "Poivre noir",    "description": "Baie noire et piquante utilisee pour assaisonner les plats sales et les sauces."  }, 
+      {"id": 28,"name": "Sel",    "description": "Condiment mineral utilise pour assaisonner les plats sales."  }, 
+      {"id": 29,"name": "Paprika",    "description": "Epice rouge et douce utilisee pour colorer et parfumer les plats de viande, de legumes et les sauces."  },
+      {"id": 30,"name": "Poivre de Cayenne",    "description": "Piment fort et piquant utilise pour relever les plats sales, les marinades et les sauces."  }
+
+
+
+    ]
+  }
+  
